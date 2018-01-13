@@ -140,4 +140,12 @@ public class QueryTest {
         UnsignedQuery query = builder.getRolePermissions("user").build();
         assertTrue(checkProtoQuery(proto(query)));
     }
+
+    @Test
+    void getTransactions() {
+        HashVector hv = new HashVector();
+        hv.add(new Hash("123"));
+        UnsignedQuery query = builder.getTransactions(hv).build();
+        assertTrue(checkProtoQuery(proto(query)));
+    }
 }
