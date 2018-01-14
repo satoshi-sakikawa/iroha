@@ -61,6 +61,7 @@ else()
       -e '${CMAKE_SOURCE_DIR}/external/*'
       -e '${CMAKE_SOURCE_DIR}/schema/*'
       -e '${CMAKE_BINARY_DIR}/*'
+      -e '${CMAKE_SOURCE_DIR}/test'
       --gcov-executable='${GCOV_BACKEND}'
       -o ${REPORT_DIR}/gcovr.xml
     COMMENT "Collecting coverage data with gcovr"
